@@ -1,30 +1,31 @@
 import React from 'react';
-import './Home.css';
-
+import { Link } from 'react-router-dom';
+import farmaciaLogo from '../../assets/75.jpg';
 
 function Home() {
     return (
         <>
-        <div className="bg-green-700 flex justify-center">
-          <div className='container grid grid-cols-2 text-white'>
-            <div className="flex flex-col gap-4 items-center justify-center py-4">
-              <h2 className='text-5xl font-bold'>Bem vinde!</h2>
-              <p className='text-xl'>Encontre tudo na 75</p>
+            <div className="bg-green-700 flex justify-center">
+                <div className='container grid grid-cols-2 text-white'>
+                    <div className="flex flex-col gap-4 items-center justify-center py-4">
+                        <h2 className='text-5xl font-bold'>Bem-vindo á 75</h2>
+                        <p className='text-xl'>Encontre os melhores produtos de saúde e bem-estar.</p>
   
-              <div className="flex justify-around gap-4">
-              
-                <button className='rounded bg-white text-blue-800 py-2 px-4'>Produtos</button>
-              </div>
-            </div>
+                        <div className="flex justify-around gap-4">
+                            <button className='rounded bg-white text-green-800 py-2 px-4'>Explorar Produtos</button>
+                            <Link to="/contact">
+                                <button className='rounded bg-white text-green-800 py-2 px-4'>Fazer Pedido</button>
+                            </Link>
+                        </div>
+                    </div>
   
-            <div className="flex justify-center ">
-
-      
+                    <div className="flex justify-center">
+                        <img src={farmaciaLogo} alt="Farmácia Logo" className='w-2/3' />
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-      
-      </>
+            {/* Substitua <ListaPostagens /> com o componente apropriado da sua aplicação */}
+        </>
     );
 }
 
