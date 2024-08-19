@@ -1,16 +1,26 @@
-import React from 'react';
+
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Footer from './components/footer/Footer';
 import './App.css';
 import Home from './pages/home/home';
 import Navbar from './components/navBar/NavBar';
-import Footer from './components/footer/footer';
 
 function App() {
   return (
     <>
-    <Navbar/>
-    <Home/>
-    <Footer/>
+      <BrowserRouter>
+        <Navbar />
+        <div className='min-h-[80vh]'>
+          <Routes>
+            {/* Defina suas rotas aqui */}
+            <Route path="/" element={<Home />} />
+          
+          </Routes>
+        </div>
+        <Footer  />
+      </BrowserRouter>
     </>
-);
+  );
 }
-export default App;
+
+export default App
